@@ -34,4 +34,15 @@ def get_scenarios():
             "safety_gap": 1,
             "disappear_at_goal": False,
         },
+        {
+            "name": "3_edge_swap",
+            "description": "2 agents traverse edge (1,0)↔(2,0) in opposite directions — edge-swap resolved",
+            "routes": [
+                _r(0, [(0, 0), (1, 0), (2, 0), (3, 0)]),
+                _r(1, [(2, 1), (2, 0), (1, 0), (1, 1)]),
+            ],
+            "max_time_ticks": 12,
+            "safety_gap": 1,
+            "disappear_at_goal": False,
+        },
     ]
