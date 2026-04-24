@@ -45,4 +45,16 @@ def get_scenarios():
             "safety_gap": 1,
             "disappear_at_goal": False,
         },
+        {
+            "name": "4_three_way_junction",
+            "description": "3 agents converge at (2,2) from W, S, NW — cascading waits",
+            "routes": [
+                _r(0, [(0, 2), (1, 2), (2, 2), (3, 2), (4, 2)]),
+                _r(1, [(2, 0), (2, 1), (2, 2), (2, 3), (2, 4)]),
+                _r(2, [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]),
+            ],
+            "max_time_ticks": 14,
+            "safety_gap": 1,
+            "disappear_at_goal": False,
+        },
     ]
