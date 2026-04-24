@@ -23,4 +23,15 @@ def get_scenarios():
             "safety_gap": 1,
             "disappear_at_goal": False,
         },
+        {
+            "name": "2_vertex_conflict",
+            "description": "2 agents converge at (2,1) at t=2 — one waits 1 tick",
+            "routes": [
+                _r(0, [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1)]),
+                _r(1, [(2, -1), (2, 0), (2, 1), (2, 2)]),
+            ],
+            "max_time_ticks": 10,
+            "safety_gap": 1,
+            "disappear_at_goal": False,
+        },
     ]
