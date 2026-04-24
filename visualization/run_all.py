@@ -16,7 +16,7 @@ if str(_project_root) not in sys.path:
     sys.path.insert(0, str(_project_root))
 
 from visualization.animate import animate_scenario
-from wopbs.models import AgentRoute, Vertex
+from wocbs.models import AgentRoute, Vertex
 
 
 def v(x: int, y: int) -> Vertex:

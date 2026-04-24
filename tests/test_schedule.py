@@ -1,5 +1,5 @@
-from wopbs.models import Vertex, AgentRoute
-from wopbs.schedule import Schedule
+from wocbs.models import AgentRoute, Vertex
+from wocbs.schedule import Schedule
 
 
 def _make_routes():

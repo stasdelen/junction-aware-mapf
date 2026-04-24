@@ -1,6 +1,10 @@
-from wopbs.models import (
-    Vertex, AgentRoute, PrecedenceType, PrecedenceConstraint,
-    CollisionType, Collision
+from wocbs.models import (
+    AgentRoute,
+    Collision,
+    CollisionType,
+    PrecedenceConstraint,
+    PrecedenceType,
+    Vertex,
 )
 
 
@@ -22,14 +26,18 @@ def test_agent_route_defaults():
 def test_precedence_constraint_key_unique():
     c1 = PrecedenceConstraint(
         type=PrecedenceType.VERTEX_CLEAR_BEFORE_REACH,
-        before_agent=0, before_index=1,
-        after_agent=1, after_index=2,
+        before_agent=0,
+        before_index=1,
+        after_agent=1,
+        after_index=2,
         safety_gap_ticks=1,
     )
     c2 = PrecedenceConstraint(
         type=PrecedenceType.VERTEX_CLEAR_BEFORE_REACH,
-        before_agent=1, before_index=2,
-        after_agent=0, after_index=1,
+        before_agent=1,
+        before_index=2,
+        after_agent=0,
+        after_index=1,
         safety_gap_ticks=1,
     )
     assert c1.canonical_key() != c2.canonical_key()
@@ -38,8 +46,10 @@ def test_precedence_constraint_key_unique():
 def test_precedence_constraint_key_stable():
     c = PrecedenceConstraint(
         type=PrecedenceType.EDGE_CLEAR_BEFORE_TRAVERSE,
-        before_agent=0, before_index=0,
-        after_agent=1, after_index=0,
+        before_agent=0,
+        before_index=0,
+        after_agent=1,
+        after_index=0,
         safety_gap_ticks=1,
     )
     assert c.canonical_key() == c.canonical_key()

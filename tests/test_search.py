@@ -1,8 +1,9 @@
 import pytest
-from wopbs.models import Vertex, AgentRoute, PrecedenceConstraint, PrecedenceType
-from wopbs.search import WaitOnlyPrecedenceSearch
-from wopbs.collision import find_first_collision
-from wopbs.temporal_solver import compute_earliest_schedule
+
+from wocbs.collision import find_first_collision
+from wocbs.models import AgentRoute, PrecedenceConstraint, PrecedenceType, Vertex
+from wocbs.search import WaitOnlyConflictSearch
+from wocbs.temporal_solver import compute_earliest_schedule
 
 
 def _route(aid, coords, release=0):

@@ -1,5 +1,5 @@
-from wopbs.models import Vertex, AgentRoute, PrecedenceConstraint, PrecedenceType
-from wopbs.temporal_solver import compute_earliest_schedule
+from wocbs.models import Vertex, AgentRoute, PrecedenceConstraint, PrecedenceType
+from wocbs.temporal_solver import compute_earliest_schedule
 
 
 def _route(aid, coords, release=0):

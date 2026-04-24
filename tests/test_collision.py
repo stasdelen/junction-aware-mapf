@@ -1,6 +1,6 @@
-from wopbs.models import Vertex, AgentRoute, CollisionType
-from wopbs.schedule import Schedule
-from wopbs.collision import find_first_collision
+from wocbs.models import Vertex, AgentRoute, CollisionType
+from wocbs.schedule import Schedule
+from wocbs.collision import find_first_collision
 
 
 def _sched(routes, arrival):

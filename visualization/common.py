@@ -3,8 +3,8 @@ from typing import List, Tuple
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 
-from wopbs.models import AgentRoute
-from wopbs.schedule import Schedule
+from wocbs.models import AgentRoute
+from wocbs.schedule import Schedule
 
 # Agent colors: blue, orange, green, red
 AGENT_COLORS = ["#4C72B0", "#DD8452", "#55A868", "#C44E52"]

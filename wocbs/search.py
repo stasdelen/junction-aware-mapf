@@ -31,7 +31,7 @@ class SearchNode:
         return self.cost() < other.cost()
 
 
-class WaitOnlyPrecedenceSearch:
+class WaitOnlyConflictSearch:
     def __init__(
         self,
         routes: List[AgentRoute],

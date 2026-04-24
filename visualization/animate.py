@@ -9,8 +9,8 @@ matplotlib.use("Agg")  # non-interactive backend
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter
 
-from wopbs.models import AgentRoute
-from wopbs.search import WaitOnlyPrecedenceSearch
+from wocbs.models import AgentRoute
+from wocbs.search import WaitOnlyConflictSearch
 
 from .common import draw_frame, grid_bounds
 
