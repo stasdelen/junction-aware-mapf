@@ -12,6 +12,8 @@ from matplotlib.animation import FuncAnimation, PillowWriter
 from wopbs.models import AgentRoute
 from wopbs.search import WaitOnlyPrecedenceSearch
 
+from .common import draw_frame, grid_bounds
+
 
 def animate_scenario(scenario: dict, output_dir: Path) -> None:
     name: str = scenario["name"]
