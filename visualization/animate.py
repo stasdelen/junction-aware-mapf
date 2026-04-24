@@ -23,7 +23,7 @@ def animate_scenario(scenario: dict, output_dir: Path) -> None:
     disappear: bool = scenario.get("disappear_at_goal", False)
     description: str = scenario.get("description", "")
 
-    solver = WaitOnlyPrecedenceSearch(
+    solver = WaitOnlyConflictSearch(
         routes, max_t, safety_gap=safety_gap, disappear_at_goal=disappear
     )
     schedule = solver.solve()
