@@ -1,9 +1,20 @@
 # junction-aware-mapf
 Multi Agent Path Finding solutions for Fleet Management Systems
 
-The core package is `wocbs`. It models agent routes, detects route collisions,
-builds precedence constraints, and searches for a feasible schedule by delaying
-agents instead of replanning paths.
+
+# Wait-Only Conflict-Based Search (WOCBS)
+
+WOCBS is a CBS-variant that operates over **temporal precedence constraints**. Instead of replanning routes, it enforces ordering between specific path events (vertex arrivals and edge traversals):
+
+The constraint graph is solved with **Bellman-Ford longest-path** to compute earliest feasible arrival times. A positive cycle in the constraint graph means the ordering is infeasible (e.g., A before B and B before A).
+
+Search is **best-first** over constraint sets: at each node, the first collision is detected deterministically, two child nodes are generated (one per ordering), and the heap is ordered by `(total_delay, makespan, constraint_count)`.
+
+## Requirements
+
+- Python 3.10+
+- `matplotlib` 3.10+ (for `FuncAnimation`)
+- `Pillow` (for `PillowWriter` GIF export)
 
 ## Layout
 
