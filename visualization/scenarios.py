@@ -57,4 +57,29 @@ def get_scenarios():
             "safety_gap": 1,
             "disappear_at_goal": False,
         },
+        {
+            "name": "5_chain_conflict",
+            "description": "3 agents: horizontal robot conflicts independently at (2,2) and (4,2)",
+            "routes": [
+                _r(0, [(0, 2), (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2)]),
+                _r(1, [(2, 4), (2, 3), (2, 2), (2, 1), (2, 0)]),
+                _r(2, [(4, 4), (4, 3), (4, 2), (4, 1), (4, 0)]),
+            ],
+            "max_time_ticks": 14,
+            "safety_gap": 1,
+            "disappear_at_goal": False,
+        },
+        {
+            "name": "6_four_intersection",
+            "description": "4 agents converge at (2,2) from W, S, NW, NE — 3 agents wait in sequence",
+            "routes": [
+                _r(0, [(0, 2), (1, 2), (2, 2), (3, 2), (4, 2)]),
+                _r(1, [(2, 0), (2, 1), (2, 2), (2, 3), (2, 4)]),
+                _r(2, [(0, 4), (1, 3), (2, 2), (3, 1), (4, 0)]),
+                _r(3, [(4, 4), (3, 3), (2, 2), (1, 1), (0, 0)]),
+            ],
+            "max_time_ticks": 16,
+            "safety_gap": 1,
+            "disappear_at_goal": False,
+        },
     ]
